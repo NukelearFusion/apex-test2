@@ -41,6 +41,7 @@ function makeEmail(to, cc, subject, message) {
 
 app.post('/send-email', async (req, res) => {
     const { fullName, email, phone, car, description, date, time } = req.body;
+    console.log("Полученные данные:", { date, time });
 
     const mailText = `
 Jauns ieraksts no vietnes!
@@ -79,4 +80,3 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server listening on port ${PORT}`);
 });
-console.log("Полученные данные:", { date, time });
