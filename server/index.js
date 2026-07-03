@@ -9,7 +9,7 @@ const app = express();
 app.use(bodyParser.json());
 
 app.use(cors({
-    origin: 'https://sunny-caramel-724a7b.netlify.app'
+    origin: 'https://bejewelled-kashata-2949b6.netlify.app'
 }));
 
 const oAuth2Client = new google.auth.OAuth2(
