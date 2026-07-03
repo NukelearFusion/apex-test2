@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap');
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    background: #111;
+    padding: 35px 30px;
+    border: 2px solid #2c2c2c;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+.registration-form .MuiInputBase-root {
+    background-color: #0a0a0a;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 0; 
+}
+
+/* Base border style - strictly locked thickness */
+.registration-form .MuiOutlinedInput-notchedOutline {
+    border-color: #333;
+    border-width: 2px !important; 
+    transition: border-color 0.3s ease;
+}
+
+/* Hover state - keeping the exact same thickness */
+.registration-form .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: #555;
+    border-width: 2px !important;
+}
+
+/* Focused state - preventing any size or layout shifts */
+.registration-form .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #ffc600;
+    border-width: 2px !important;
+}
+
+.registration-form .MuiInputLabel-root {
+    color: #888;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+
+.registration-form .MuiInputLabel-root.Mui-focused {
+    color: #ffc600;
+}
+
+/* Error state - maintaining locked thickness */
+.registration-form .Mui-error .MuiOutlinedInput-notchedOutline {
+    border-color: #ff0000 !important;
+    border-width: 2px !important;
+}
+
+.registration-form .MuiInputLabel-root.Mui-error {
+    color: #ff0000 !important;
+}
+
+.registration-form .MuiFormHelperText-root {
+    color: #888;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.registration-form .MuiFormHelperText-root.Mui-error {
+    color: #ff0000;
+    font-weight: 600;
+}
+
+.registration-form .MuiFormControlLabel-label {
+    color: #ccc;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.registration-form .MuiLink-root {
+    color: #ffc600;
+    font-weight: 600;
+    text-decoration-color: #ffc600;
+    transition: color 0.2s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.registration-form .MuiLink-root:hover {
+    color: #fff;
+    text-decoration-color: #fff;
+}
+
+.policy-dialog-paper {
+    background-color: #111 !important;
+    color: #ccc !important;
+    border: 3px solid #ffc600;
+    border-radius: 0 !important;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.9) !important;
+}
+
+.policy-dialog-paper .MuiDialogTitle-root {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    color: #fff;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #333;
+    background: #0a0a0a;
+}
+
+.policy {
+    white-space: pre-line;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    padding: 25px !important;
+}
+
+.policy-dialog-paper .MuiDialogContent-dividers {
+    border-color: #333;
+}
+
+@media (max-width: 800px) {
+    .registration-form {
+        padding: 25px 20px;
+        gap: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .registration-form {
+        padding: 20px 15px;
+        gap: 1rem;
+    }
+
+    .registration-form .MuiTextField-root {
+        width: 100%;
+    }
+
+    .registration-form .MuiOutlinedInput-root {
+        font-size: 16px; 
+    }
+
+    .registration-form .MuiFormHelperText-root {
+        font-size: 0.75rem;
+    }
+
+    /* Fixed padding to prevent height twitching on mobile focus */
+    .registration-form .MuiInputBase-input {
+        padding: 12px 14px !important;
+    }
+
+    .registration-form .MuiInputLabel-root {
+        font-size: 1.1rem;
+    }
+    
+    .registration-form .MuiFormControlLabel-label {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .registration-form {
+        gap: 0.8rem;
+    }
+
+    /* Fixed padding to prevent height twitching on small screens */
+    .registration-form .MuiInputBase-input {
+        padding: 10px 12px !important;
+    }
+}
+
+@media (prefers-contrast: more) {
+    .registration-form .MuiOutlinedInput-notchedOutline {
+        border-width: 3px !important;
+        border-color: #fff;
+    }
+}

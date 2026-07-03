@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+.container {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    box-sizing: border-box;
+    min-width: 0;
+    width: 100%;
+    color: #fff;
+    gap: 30px;
+    align-items: stretch;
+}
+
+.dateContainer {
+    flex: 1;
+    min-width: 360px;
+    background: #111;
+    border: 2px solid #2c2c2c;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 20px;
+}
+
+.dateInput {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.custom-calendar {
+    color: #fff !important;
+    font-family: 'Montserrat', sans-serif !important;
+    background: transparent !important;
+    width: 100% !important;
+    max-width: 400px !important;
+    max-height: none !important;
+    height: auto !important;
+}
+
+.custom-calendar .MuiPickersCalendarHeader-root {
+    margin-top: 5px !important;
+    margin-bottom: 25px !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+}
+
+.custom-calendar .MuiPickersCalendarHeader-label {
+    color: #fff;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 1.3rem;
+}
+
+.custom-calendar .MuiSvgIcon-root {
+    color: #ffc600;
+    font-size: 1.6rem;
+}
+
+.custom-calendar .MuiIconButton-root:hover {
+    background-color: rgba(255, 198, 0, 0.1);
+}
+
+.custom-calendar .MuiDayCalendar-header {
+    justify-content: space-between !important;
+    margin-bottom: 15px !important;
+}
+
+.custom-calendar .MuiTypography-root {
+    color: #ccc;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 600;
+    width: 46px !important;
+    height: 40px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.custom-calendar .MuiPickersSlideTransition-root {
+    min-height: 290px !important;
+}
+
+.custom-calendar .MuiDayCalendar-weekContainer {
+    justify-content: space-between !important;
+    margin: 6px 0 !important;
+}
+
+.custom-calendar .MuiPickersDay-root {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    background-color: transparent;
+    transition: all 0.2s;
+    border-radius: 4px;
+    font-size: 1.05rem;
+    width: 44px !important;
+    height: 44px !important;
+}
+
+.custom-calendar .MuiPickersDay-root:not(.Mui-disabled):hover {
+    background-color: #333;
+    border: 1px solid #ffc600;
+}
+
+.custom-calendar .MuiPickersDay-root.Mui-disabled {
+    color: #444;
+}
+
+.custom-calendar .MuiPickersDay-root.Mui-selected,
+.custom-calendar .MuiPickersDay-root.dateSelected {
+    background-color: #ffc600 !important;
+    color: #000 !important;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(255, 198, 0, 0.4);
+}
+
+/* УВЕЛИЧЕННЫЙ ТАЙМПИКЕР */
+.timeGrid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+     min-height: 704px; /* подбираешь число вручную */
+    box-sizing: border-box;
+
+    /* чтобы кнопки шли сверху и блок растягивался как форма */
+    align-content: start;
+
+    background: #111;
+    border: 2px solid #2c2c2c;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+
+    padding: 40px 30px;
+
+    height: 100%;
+}
+
+.timeButton {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    padding: 15px 0 !important;
+
+    border-color: #444 !important;
+    color: #ccc !important;
+    border-radius: 4px !important;
+    background: transparent !important;
+    transition: all 0.2s ease !important;
+}
+
+.timeButton:hover {
+    border-color: #ffc600 !important;
+    color: #fff !important;
+    background: rgba(255, 198, 0, 0.05) !important;
+}
+
+.timeButton-selected {
+    background-color: #ffc600 !important;
+    color: #000 !important;
+    border-color: #ffc600 !important;
+    font-weight: 700 !important;
+    box-shadow: 0 4px 12px rgba(255, 198, 0, 0.4) !important;
+}
+
+@media (max-width: 950px) {
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .dateContainer {
+        min-width: 100%;
+        padding: 25px 15px;
+    }
+
+    .timeGrid {
+        padding: 30px 25px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-calendar .MuiPickersDay-root {
+        width: 38px !important;
+        height: 38px !important;
+        font-size: 0.95rem;
+    }
+
+    .custom-calendar .MuiTypography-root {
+        width: 38px !important;
+        font-size: 0.8rem;
+    }
+
+    .timeGrid {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 20px 15px;
+        gap: 10px;
+    }
+
+    .timeButton {
+        font-size: 0.9rem !important;
+        padding: 12px 0 !important;
+    }
+}

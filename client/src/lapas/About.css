@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,600;1,400&family=Permanent+Marker&display=swap');
+
+.about-section {
+    background-color: #111;
+    background-image:
+        linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000),
+        linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000);
+    background-size: 10px 10px;
+    background-position: 0 0, 5px 5px;
+    color: #fff;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    max-width: 100%;
+    align-items: center;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.about-container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.about-content {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.about-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    font-style: italic;
+    font-weight: normal;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 3px 3px 0 #000, -1px -1px 0 #ffc600;
+}
+
+.about-subtitle-handwritten {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    margin-bottom: 25px;
+    color: #ffc600;
+    transform: rotate(-2deg);
+    display: inline-block;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.about-description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+    max-width: 850px;
+    font-weight: 400;
+}
+
+.about-media-wide {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding: 40px 0;
+    position: relative;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0px 15px 30px rgba(0,0,0,0.9), inset 0px -15px 30px rgba(0,0,0,0.9);
+    overflow: hidden;
+}
+
+.videos-track {
+    display: flex;
+    width: max-content;
+    animation: smoothScroll 40s linear infinite;
+}
+
+.videos-track.paused {
+    animation-play-state: paused;
+}
+
+.video-group {
+    display: flex;
+    gap: 30px;
+    padding-right: 30px;
+}
+
+@keyframes smoothScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.video-group .video-wrapper {
+    width: 450px;
+    height: 253px;
+    position: relative;
+    background: #000;
+    cursor: pointer;
+    overflow: hidden;
+    border: 3px solid #1a1a1a;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.9);
+    transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-group .video-wrapper:hover {
+    border-color: #ffc600;
+    transform: scale(1.03) translateY(-5px);
+    box-shadow: 0 15px 35px rgba(255, 198, 0, 0.2);
+    z-index: 2;
+}
+
+.video-thumbnail {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.video-group .video-wrapper:hover .video-thumbnail img {
+    transform: scale(1.1);
+}
+
+.play-button-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    opacity: 0.7;
+    width: 75px;
+    height: 75px;
+    transition: opacity 0.3s, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.video-group .video-wrapper:hover .play-button-overlay {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.btn-bottom-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px;
+}
+
+.youtube-btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.youtube-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #e62117;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    font-style: italic;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 4px 4px 0 #000;
+}
+
+.youtube-btn:hover {
+    background-color: #ff0000;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 #000, 0 0 15px rgba(230, 33, 23, 0.5);
+}
+
+.youtube-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 #000;
+}
+
+.youtube-icon {
+    width: 35px;
+    margin-left: 15px;
+    filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.5));
+}
+
+/* =========================================
+   СТИЛИ ДЛЯ МОДАЛЬНОГО ОКНА (ПОЛНОЭКРАННОЕ ВИДЕО) 
+   ========================================= */
+
+.video-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px); /* Легкое размытие заднего фона */
+}
+
+.video-modal-content {
+    position: relative;
+    width: 90vw;
+    max-width: 1400px; /* Ограничиваем максимальную ширину на больших экранах */
+    aspect-ratio: 16 / 9; /* Сохраняем пропорции видео */
+    background: #000;
+    box-shadow: 0 0 40px rgba(0,0,0,1);
+    border-radius: 4px;
+}
+
+.video-modal-content iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 4px;
+}
+
+.close-modal-btn {
+    position: absolute;
+    top: -45px;
+    right: 0;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.close-modal-btn:hover {
+    color: #ffc600;
+    transform: scale(1.1);
+}
+
+/* ========================================= */
+
+@media (max-width: 768px) {
+    .about-title {
+        font-size: 2.8rem;
+    }
+    
+    .about-subtitle-handwritten {
+        font-size: 1.2rem;
+    }
+
+    .video-group .video-wrapper {
+        width: 300px;
+        height: 168px;
+    }
+    
+    .youtube-btn-wrapper {
+        justify-content: center;
+    }
+
+    .video-modal-content {
+        width: 100vw;
+        border-radius: 0;
+    }
+
+    .close-modal-btn {
+        top: -35px;
+        right: 10px;
+        font-size: 30px;
+    }
+}
