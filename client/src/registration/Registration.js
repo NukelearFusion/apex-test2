@@ -47,7 +47,7 @@ const Registration = () => {
                 time: timeStr
             };
 
-            const response = await fetch('https://apex-mailer.onrender.com/send-email', {
+            const response = await fetch('https://apex-test2.onrender.com/send-email', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)
