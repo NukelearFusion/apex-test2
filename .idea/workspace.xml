@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f8406fb5-aef9-4cc2-8b74-aff70fcb5d1c" name="Changes" comment="consent validation">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/registration/RegistrationForm.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/registration/RegistrationForm.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/registration/RegistrationForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/registration/RegistrationForm.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package.json" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;apexmotors-ba&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/apexmotors-ba/apex&quot;,
+    &quot;accountId&quot;: &quot;651b165e-583a-4ff3-881a-832fdf0d7da8&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="361QgL6jt8QigI43F9N4Zjbyv5a" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/KOT/WebstormProjects/apex&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.start client.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start server.executor&quot;: &quot;Run&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm2025.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\KOT\WebstormProjects\apex\client\src\img\icons" />
+      <recent name="C:\Users\KOT\WebstormProjects\apex\client\public" />
+      <recent name="C:\Users\KOT\WebstormProjects\apex\client\src\common components" />
+      <recent name="C:\Users\KOT\WebstormProjects\apex\client\src\Registration" />
+      <recent name="C:\Users\KOT\WebstormProjects\apex\client\src\img\carousel" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.start server">
+    <configuration name="start client" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/client/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/server/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="npm.start client" />
+      <item itemvalue="npm.start server" />
+    </list>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-WS-251.23774.424" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f8406fb5-aef9-4cc2-8b74-aff70fcb5d1c" name="Changes" comment="" />
+      <created>1764171707996</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1764171707996</updated>
+      <workItem from="1764171710083" duration="2779000" />
+      <workItem from="1764174734751" duration="30150000" />
+      <workItem from="1764768253293" duration="26728000" />
+      <workItem from="1764948294714" duration="8293000" />
+      <workItem from="1765118812367" duration="14386000" />
+      <workItem from="1765378414104" duration="3697000" />
+    </task>
+    <task id="LOCAL-00001" summary="updating URL">
+      <option name="closed" value="true" />
+      <created>1764175156928</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1764175156929</updated>
+    </task>
+    <task id="LOCAL-00002" summary="updating URL">
+      <option name="closed" value="true" />
+      <created>1764175834077</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1764175834077</updated>
+    </task>
+    <task id="LOCAL-00003" summary="updating URL">
+      <option name="closed" value="true" />
+      <created>1764176117834</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1764176117834</updated>
+    </task>
+    <task id="LOCAL-00004" summary="updating Port">
+      <option name="closed" value="true" />
+      <created>1764178430169</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1764178430169</updated>
+    </task>
+    <task id="LOCAL-00005" summary="updating URL">
+      <option name="closed" value="true" />
+      <created>1764179470474</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1764179470474</updated>
+    </task>
+    <task id="LOCAL-00006" summary="cors added">
+      <option name="closed" value="true" />
+      <created>1764340197279</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1764340197279</updated>
+    </task>
+    <task id="LOCAL-00007" summary="cors added">
+      <option name="closed" value="true" />
+      <created>1764340345609</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1764340345609</updated>
+    </task>
+    <task id="LOCAL-00008" summary="styles updated">
+      <option name="closed" value="true" />
+      <created>1764340993869</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1764340993869</updated>
+    </task>
+    <task id="LOCAL-00009" summary="styles updated">
+      <option name="closed" value="true" />
+      <created>1764341276179</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1764341276179</updated>
+    </task>
+    <task id="LOCAL-00010" summary="styles updated">
+      <option name="closed" value="true" />
+      <created>1764349907163</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1764349907163</updated>
+    </task>
+    <task id="LOCAL-00011" summary="default date updated">
+      <option name="closed" value="true" />
+      <created>1764409604479</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1764409604479</updated>
+    </task>
+    <task id="LOCAL-00012" summary="styles updated">
+      <option name="closed" value="true" />
+      <created>1764415346265</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1764415346265</updated>
+    </task>
+    <task id="LOCAL-00013" summary="date selection logic updated">
+      <option name="closed" value="true" />
+      <created>1764416320063</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1764416320063</updated>
+    </task>
+    <task id="LOCAL-00014" summary="URL updated">
+      <option name="closed" value="true" />
+      <created>1764416694811</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1764416694811</updated>
+    </task>
+    <task id="LOCAL-00015" summary="URL updated">
+      <option name="closed" value="true" />
+      <created>1764513224666</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1764513224666</updated>
+    </task>
+    <task id="LOCAL-00016" summary="new pages, routing, styles, etc.">
+      <option name="closed" value="true" />
+      <created>1765125491389</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1765125491389</updated>
+    </task>
+    <task id="LOCAL-00017" summary="styles updated&#10;consent">
+      <option name="closed" value="true" />
+      <created>1765134206321</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1765134206321</updated>
+    </task>
+    <task id="LOCAL-00018" summary="styles updated&#10;consent">
+      <option name="closed" value="true" />
+      <created>1765378890320</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1765378890320</updated>
+    </task>
+    <task id="LOCAL-00019" summary="consent validation">
+      <option name="closed" value="true" />
+      <created>1765380603634</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1765380603634</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="updating Port" />
+    <MESSAGE value="updating URL" />
+    <MESSAGE value="cors added" />
+    <MESSAGE value="default date updated" />
+    <MESSAGE value="styles updated" />
+    <MESSAGE value="date selection logic updated" />
+    <MESSAGE value="URL updated" />
+    <MESSAGE value="new pages, routing, styles, etc." />
+    <MESSAGE value="styles updated&#10;consent" />
+    <MESSAGE value="consent validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="consent validation" />
+  </component>
+</project>
