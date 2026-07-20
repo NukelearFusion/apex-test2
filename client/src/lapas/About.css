@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,600;1,400&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400;700&family=Montserrat:ital,wght@0,400;0,600;1,400&display=swap');
 
 .about-section {
     background-color: #111;
@@ -44,8 +44,9 @@
 }
 
 .about-subtitle-handwritten {
-    font-family: 'Permanent Marker', cursive;
-    font-size: 1.4rem;
+    font-family: 'Caveat', cursive;
+    font-size: 1.8rem;
+    font-weight: 700;
     line-height: 1.4;
     margin-bottom: 25px;
     color: #ffc600;
@@ -196,10 +197,6 @@
     filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.5));
 }
 
-/* =========================================
-   СТИЛИ ДЛЯ МОДАЛЬНОГО ОКНА (ПОЛНОЭКРАННОЕ ВИДЕО) 
-   ========================================= */
-
 .video-modal-overlay {
     position: fixed;
     top: 0;
@@ -211,14 +208,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(5px); /* Легкое размытие заднего фона */
+    backdrop-filter: blur(5px);
 }
 
 .video-modal-content {
     position: relative;
     width: 90vw;
-    max-width: 1400px; /* Ограничиваем максимальную ширину на больших экранах */
-    aspect-ratio: 16 / 9; /* Сохраняем пропорции видео */
+    max-width: 1400px;
+    aspect-ratio: 16 / 9;
     background: #000;
     box-shadow: 0 0 40px rgba(0,0,0,1);
     border-radius: 4px;
@@ -248,8 +245,6 @@
     color: #ffc600;
     transform: scale(1.1);
 }
-
-/* ========================================= */
 
 @media (max-width: 768px) {
     .about-title {
