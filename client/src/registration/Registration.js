@@ -26,55 +26,55 @@ const Registration = () => {
     const [message, setMessage] = useState('');
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
+      e.preventDefault();
 
-        if (!formData.fullName || !formData.phone || !formData.car || !formData.consent || !dateTime) {
-            setStatus('error');
-            setMessage('Lūdzu, aizpildiet visus obligātos laukus un izvēlieties datumu un laiku.');
-            return;
-        }
+      if (!formData.fullName || !formData.phone || !formData.car || !formData.consent || !dateTime || !dateTime.time) {
+          setStatus('error');
+          setMessage('Lūdzu, aizpildiet visus obligātos laukus un izvēlieties datumu un laiku.');
+          return;
+      }
 
-        setStatus('loading');
-        setMessage('');
+      setStatus('loading');
+      setMessage('');
 
-        try {
-            const dateStr = new Date(dateTime).toLocaleDateString('lv-LV');
-            const timeStr = new Date(dateTime).toLocaleTimeString('lv-LV', { hour: '2-digit', minute: '2-digit' });
+      try {
+          const dateStr = dateTime.date.toLocaleDateString('lv-LV');
+          const timeStr = dateTime.time;
 
-            const payload = {
-                ...formData,
-                date: dateStr,
-                time: timeStr
-            };
+          const payload = {
+              ...formData,
+              date: dateStr,
+              time: timeStr
+          };
 
-            const response = await fetch('https://apex-test2.onrender.com/send-email', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload)
-            });
+          const response = await fetch('https://apex-test2.onrender.com/send-email', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(payload)
+          });
 
-            if (response.ok) {
-                setStatus('success');
-                setMessage('Paldies! Jūsu ziņa ir veiksmīgi nosūtīta.');
-                setFormData({
-                    fullName: '',
-                    email: '',
-                    phone: '',
-                    car: '',
-                    description: '',
-                    consent: false
-                });
-                setDateTime(null);
-            } else {
-                const data = await response.json();
-                setStatus('error');
-                setMessage(data.error || 'Radās kļūda. Lūdzu, mēģiniet vēlreiz.');
-            }
-        } catch (error) {
-            setStatus('error');
-            setMessage('Neizdevās sazināties ar serveri.');
-        }
-    };
+          if (response.ok) {
+              setStatus('success');
+              setMessage('Paldies! Jūsu ziņa ir veiksmīgi nosūtīta.');
+              setFormData({
+                  fullName: '',
+                  email: '',
+                  phone: '',
+                  car: '',
+                  description: '',
+                  consent: false
+              });
+              setDateTime(null);
+          } else {
+              const data = await response.json();
+              setStatus('error');
+              setMessage(data.error || 'Radās kļūda. Lūdzu, mēģiniet vēlreiz.');
+          }
+      } catch (error) {
+          setStatus('error');
+          setMessage('Neizdevās sazināties ar serveri.');
+      }
+  };
 
     return (
         <div className='registration-bg'>
