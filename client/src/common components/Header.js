@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom'; // Добавили Link
 import './Header.css';
 import logo from '../img/logo.png';
 import facebook from '../img/icons/facebook.svg';
@@ -64,16 +64,20 @@ function Header() {
                     <span className="hamburger-line"></span>
                     <span className="hamburger-line"></span>
                 </button>
-                <img src={logo} alt="logo" />
+                
+                {/* ИСПРАВЛЕНИЕ 1: Обернули логотип в Link на главную страницу (карусель) */}
+                <Link to="/" onClick={handleLinkClick}>
+                    <img src={logo} alt="logo" />
+                </Link>
             </div>
 
             <nav
                 ref={menuRef}
                 className={`nav-menu ${isMenuOpen ? 'active' : ''}`}
             >
+                {/* ИСПРАВЛЕНИЕ 2: Поменяли путь с "/" на "/pieraksts" */}
                 <NavLink
-                    to="/"
-                    end
+                    to="/pieraksts"
                     className={({ isActive }) => `nav-link ${isActive ? 'nav-link--active' : ''}`}
                     onClick={handleLinkClick}
                 >
@@ -103,6 +107,13 @@ function Header() {
                 >
                     Pakalpojumi
                 </NavLink>
+                <NavLink
+    to="/veikals"
+    className={({ isActive }) => `nav-link ${isActive ? 'nav-link--active' : ''}`}
+    onClick={handleLinkClick}
+>
+    Veikals
+</NavLink>
             </nav>
 
             <div className="header-right">

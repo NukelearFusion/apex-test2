@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap');
+
+.shop-section {
+    background-color: #111;
+    background-image:
+        linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000),
+        linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000);
+    background-size: 10px 10px;
+    background-position: 0 0, 5px 5px;
+    width: 100vw;
+    max-width: 100%;
+    min-height: calc(100vh - 128px);
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+    overflow-x: hidden;
+}
+
+.shop-container {
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.shop-card {
+    background: #0a0a0a;
+    border: 2px solid #2c2c2c;
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.shop-card:hover {
+    border-color: #ffc600;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.9);
+}
+
+.shop-card.active {
+    border-color: #ffc600;
+    background: rgba(255, 198, 0, 0.05);
+    box-shadow: inset 0 0 20px rgba(255, 198, 0, 0.1), 0 10px 25px rgba(0, 0, 0, 0.8);
+}
+
+.shop-icon {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    margin-bottom: 20px; 
+    transition: transform 0.3s ease;
+}
+
+.shop-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    filter: invert(90%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.shop-card:hover .shop-icon img,
+.shop-card.active .shop-icon img {
+    filter: invert(72%) sepia(91%) saturate(526%) hue-rotate(355deg) brightness(104%) contrast(105%);
+}
+
+.shop-card:hover .shop-icon {
+    transform: scale(1.1);
+}
+
+.shop-card-title {
+    color: #fff;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: left;
+    white-space: pre-line;
+    font-weight: normal;
+    transition: color 0.3s ease;
+}
+
+.shop-card:hover .shop-card-title,
+.shop-card.active .shop-card-title {
+    color: #ffc600;
+}
+
+.shop-card-desc {
+    color: #999;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-top: 12px;
+    text-align: left;
+    transition: color 0.3s ease;
+}
+
+.shop-card:hover .shop-card-desc,
+.shop-card.active .shop-card-desc {
+    color: #bbb;
+}
+
+.shop-details {
+    margin-top: 50px;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.shop-divider {
+    height: 3px;
+    background: #2c2c2c;
+    margin: 0 0 40px 0;
+    position: relative;
+}
+
+.shop-divider::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 3px;
+    background: #ffc600;
+    box-shadow: 0 0 10px rgba(255, 198, 0, 0.5);
+}
+
+.shop-selected-title {
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: #ffc600;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0 #000;
+    white-space: pre-line;
+    font-weight: normal;
+}
+
+.shop-items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.shop-item {
+    scroll-margin-top: 100px;  
+    background: #0a0a0a;
+    border: 2px solid #2c2c2c;
+    border-left: 4px solid #444;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.shop-item:hover {
+    border-color: #444;
+    border-left-color: #ffc600;
+}
+
+.shop-item.open {
+    border-color: #333;
+    border-left-color: #ffc600;
+    background: #111;
+}
+
+.shop-item-header {
+    width: 100%;
+    padding: 22px 30px;
+    border: none;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.shop-item:hover .shop-item-header {
+    color: #ffc600;
+}
+
+.shop-item-header .arrow {
+    font-size: 0.9rem;
+    color: #888;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.shop-item-header .arrow.open {
+    transform: rotate(180deg);
+    color: #ffc600;
+}
+
+.shop-item-content {
+    padding: 0 30px 30px 30px;
+    animation: slideIn 0.3s ease;
+}
+
+.shop-item-content p {
+    font-family: 'Montserrat', sans-serif;
+    color: #ccc;
+    line-height: 1.7;
+    font-size: 1rem;
+    margin: 0;
+    padding-top: 20px;
+    border-top: 1px solid #2c2c2c;
+    white-space: pre-line;
+}
+
+.shop-form-wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.shop-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    background: #111;
+    padding: 35px 30px;
+    border: 2px solid #2c2c2c;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+.shop-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+}
+
+.shop-input-group input,
+.shop-input-group textarea {
+    background-color: #0a0a0a;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 0;
+    border: 2px solid #333;
+    padding: 18px 20px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.shop-input-group input::placeholder,
+.shop-input-group textarea::placeholder {
+    color: #888;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    opacity: 1;
+    transition: color 0.3s ease;
+}
+
+.shop-input-group input:focus::placeholder,
+.shop-input-group textarea:focus::placeholder {
+    color: #ffc600;
+}
+
+.shop-input-group input:hover,
+.shop-input-group textarea:hover {
+    border-color: #555;
+}
+
+.shop-input-group input:focus,
+.shop-input-group textarea:focus {
+    border-color: #ffc600;
+}
+
+.shop-input-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.shop-input-group.file-group {
+    position: relative;
+}
+
+.file-placeholder {
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    color: #888;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    pointer-events: none;
+    transition: color 0.3s ease;
+}
+
+.shop-input-group.file-group:focus-within .file-placeholder {
+    color: #ffc600;
+}
+
+.shop-input-group input[type="file"] {
+    padding: 14px 20px;
+    background: #0a0a0a;
+    border-style: solid;
+    cursor: pointer;
+    color: #ccc;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 50px; 
+}
+
+.shop-input-group input[type="file"]::file-selector-button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    margin-right: 15px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.shop-input-group input[type="file"]::file-selector-button:hover {
+    background: #ffc600;
+    color: #000;
+}
+
+.shop-checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.shop-checkbox-group input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #555;
+    background-color: #111;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+    margin-top: 2px;
+    border-radius: 0;
+    transition: border-color 0.2s ease;
+}
+
+.shop-checkbox-group input[type="checkbox"]:hover {
+    border-color: #888;
+}
+
+.shop-checkbox-group input[type="checkbox"]:checked {
+    border-color: #ffc600;
+}
+
+.shop-checkbox-group input[type="checkbox"]:checked::after {
+    content: '✔';
+    position: absolute;
+    color: #ffc600;
+    font-size: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.shop-checkbox-text {
+    color: #ccc;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    cursor: pointer;
+}
+
+.shop-checkbox-text a {
+    color: #ffc600;
+    text-decoration: underline;
+    text-decoration-color: #ffc600;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.shop-checkbox-text a:hover {
+    color: #fff;
+    text-decoration-color: #fff;
+}
+
+.shop-submit-btn {
+    font-family: 'Bebas Neue', sans-serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    background-color: #ffc600;
+    color: #111;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.2s ease;
+    box-shadow: 4px 4px 0 #000;
+    margin-top: 10px;
+    align-self: flex-start;
+}
+
+.shop-submit-btn:hover {
+    background-color: #ffd740;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 #000, 0 0 15px rgba(255, 198, 0, 0.3);
+}
+
+.shop-submit-btn:disabled {
+    background-color: #555;
+    color: #888;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+.shop-form-message {
+    margin-top: 15px;
+    padding: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    border-left: 4px solid;
+}
+
+.shop-form-message.success {
+    background: rgba(46, 213, 115, 0.1);
+    border-left-color: #2ed573;
+    color: #2ed573;
+}
+
+.shop-form-message.error {
+    background: rgba(255, 71, 87, 0.1);
+    border-left-color: #ff4757;
+    color: #ff4757;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 800px) {
+    .shop-form {
+        padding: 25px 20px;
+        gap: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .shop-section { padding: 40px 0; }
+    .shop-grid { grid-template-columns: 1fr; gap: 15px; }
+    .shop-card { padding: 25px 20px; }
+    .shop-selected-title { font-size: 1.8rem; }
+    .shop-item-header { padding: 18px 20px; font-size: 0.95rem; }
+    .shop-item-content { padding: 0 20px 20px 20px; }
+}
+
+@media (max-width: 480px) {
+    .shop-form {
+        padding: 20px 15px;
+        gap: 1rem;
+    }
+    .shop-input-group input,
+    .shop-input-group textarea {
+        padding: 14px 16px;
+        font-size: 16px; 
+    }
+    .shop-input-group input::placeholder,
+    .shop-input-group textarea::placeholder,
+    .file-placeholder {
+        font-size: 1.1rem;
+    }
+    .shop-checkbox-text {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .shop-form {
+        gap: 0.8rem;
+    }
+    .shop-input-group input,
+    .shop-input-group textarea {
+        padding: 12px 14px;
+    }
+}

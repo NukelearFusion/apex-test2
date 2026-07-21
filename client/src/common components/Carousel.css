@@ -76,21 +76,6 @@
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
 }
 
-@media (max-width: 768px) {
-    .hero-carousel {
-        height: 65vh;
-    }
-    
-    .hero-title {
-        transform: skewX(0);
-        text-shadow: 3px 3px 0 #000, -1px -1px 0 #ffc600;
-    }
-
-    .hero-subtitle {
-        font-size: 14px;
-    }
-}
-
 .hero-button {
     font-family: 'Bebas Neue', sans-serif;
     font-style: italic;

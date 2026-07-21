@@ -12,10 +12,12 @@ import Header from './common components/Header';
 import Banner from './common components/Banner';
 import Registration from './registration/Registration';
 import Footer from './common components/Footer';
-import Carousel from "./common components/Carousel";
+
+import Home from './lapas/Home'; 
 import About from "./lapas/About";
 import Contacts from "./lapas/Contacts";
 import Services from "./lapas/Services";
+import Shop from "./lapas/Shop";
 
 const App = () => {
     return (
@@ -27,13 +29,17 @@ const App = () => {
 
                 <main className='main-content'>
                     <Routes>
-                        <Route path="/" element={
+                        {/* 1. ГЛАВНАЯ СТРАНИЦА: Открывает только Home (где лежит твоя карусель) */}
+                        <Route path="/" element={<Home />} />
+
+                        {/* 2. СТРАНИЦА ЗАПИСИ: Открывает форму и её баннер */}
+                        <Route path="/pieraksts" element={
                             <>
-                                <Carousel />
                                 <Banner title="ONLINE PIERAKSTS" icon={appointmentIcon} />
                                 <Registration />
                             </>
                         } />
+
                         <Route path="/par-mums" element={
                             <>
                                 <Banner title="PAR MUMS" icon={carIcon} />
@@ -54,6 +60,12 @@ const App = () => {
                                 <Services />
                             </>
                         } />
+                        <Route path="/veikals" element={
+    <>
+        <Banner title="AUTO TIRDZNIECĪBA" icon={carIcon} />
+        <Shop />
+    </>
+} />
                     </Routes>
                 </main>
 
