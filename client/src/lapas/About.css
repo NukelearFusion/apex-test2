@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400;700&family=Montserrat:ital,wght@0,400;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,600;1,400&display=swap');
 
 .about-section {
     background-color: #111;
@@ -33,7 +33,6 @@
 .about-title {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 3.5rem;
-    font-style: italic;
     font-weight: normal;
     line-height: 1.1;
     margin-bottom: 10px;
@@ -44,15 +43,16 @@
 }
 
 .about-subtitle-handwritten {
-    font-family: 'Caveat', cursive;
-    font-size: 1.8rem;
-    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
     line-height: 1.4;
     margin-bottom: 25px;
     color: #ffc600;
-    transform: rotate(-2deg);
     display: inline-block;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .about-description {
@@ -170,7 +170,6 @@
     color: white;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.8rem;
-    font-style: italic;
     padding: 10px 30px;
     text-decoration: none;
     border-radius: 2px;
@@ -252,7 +251,7 @@
     }
     
     .about-subtitle-handwritten {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .video-group .video-wrapper {
