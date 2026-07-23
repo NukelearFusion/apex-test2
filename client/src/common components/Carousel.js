@@ -6,6 +6,7 @@ import slide1 from "../img/carousel/slide1.jpg";
 import slide2 from "../img/carousel/slide2.jpg";
 import slide3 from "../img/carousel/slide3.jpg";
 import slide4 from "../img/carousel/slide4.jpg";
+import slide5 from "../img/carousel/slide5.jpg"; // Pievienots veikala slaida attēls
 
 const slides = [
     {
@@ -39,6 +40,14 @@ const slides = [
         subtitle: "Ja nav vēlmes vai laika auto aizdzīt uz tehnisko apskati, to varam izdarīt Jūsu vietā.",
         buttonText: "PIETEIKTIES",
         buttonUrl: "/" 
+    },
+    {
+        id: 5, // Jaunais veikala slaids
+        image: slide5,
+        title: "VEIKALS",
+        subtitle: "Pirkt un pārdot automašīnu. Apskatiet piedāvājumā esošos auto vai piedāvājiet savu auto uzpirkšanai mūsu servisam.",
+        buttonText: "APSKATĪT",
+        buttonUrl: "/veikals" // Nomaini uz savu reālo veikala saiti (piem., /shop)
     }
 ];
 
