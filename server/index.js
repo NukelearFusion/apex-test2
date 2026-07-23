@@ -10,7 +10,8 @@ const app = express();
 app.use(bodyParser.json());
 
 app.use(cors({
-    origin: ['https://bejewelled-kashata-2949b6.netlify.app', 'http://localhost:3000', 'http://localhost:3001']
+    origin: ['https://bejewelled-kashata-2949b6.netlify.app', 'http://localhost:3000', 'http://localhost:3001', 'https://apexmotors.lv', 
+        'https://www.apexmotors.lv']
 }));
 
 // Настраиваем Multer для хранения загруженных файлов в оперативной памяти (buffer)
